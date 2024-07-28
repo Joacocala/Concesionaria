@@ -1,0 +1,37 @@
+{% extends "Base.html" %}
+{%load static%}
+
+{%block header%}
+<header class="bg-dark py-5">
+    <div class="container px-4 px-lg-5 my-5">
+        <div class="text-center text-white">
+            <h1 class="display-4 fw-bolder"></h1>
+            <p class="lead fw-normal text-white-50 mb-0">Aqui estan los resultados de tu busqueda. </p>
+        </div>
+    </div>
+</header>
+{%endblock%}
+
+    {%block content%}
+
+
+
+    {% for emp in empleado %}
+ 
+    <div class="card text-white bg-primary mb-3"  style="max-width: 18rem;">
+       
+        <div class="card-header">SUR ATOMOTORES</div>
+        <div class="card-body">
+          <h5 class="card-title">{{emp.nombre}} {{emp.apellido}} </h5>
+          <p class="card-text">Email:</p>
+          <p class="card-text" >{{emp.email}} </p>
+          <p class="card-text">Telefono:</p>
+          <p class="card-text" >{{emp.numero_telefono}}</p>
+       
+        </div>
+      </div>
+ 
+    {%endfor%}
+    {%endblock%}
+
+    

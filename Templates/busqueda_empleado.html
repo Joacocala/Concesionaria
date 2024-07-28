@@ -1,0 +1,36 @@
+{% extends "Base.html" %}
+{%load static%}
+
+{%block header%}
+<header class="bg-dark py-5">
+    <div class="container px-4 px-lg-5 my-5">
+        <div class="text-center text-white">
+            <h1 class="display-4 fw-bolder">Busqueda</h1>
+            <p class="lead fw-normal text-white-50 mb-0">Ingresa los datos en el siguiente formulario.</p>
+        </div>
+    </div>
+</header>
+{%endblock%}
+
+
+
+{%block content%}
+
+
+<form class="form-inline" method="POST">
+    
+{%csrf_token%}
+
+<div class="form-group" style="width:fit-content">
+    <p  type="text" class="form-control">
+    {{ mi_formulario.as_table }}
+    </p>
+    
+
+    <input type="submit" value="enviar" class="form-control" style="background: #000000;color: aqua;">
+</div>
+
+    
+</form>
+
+{%endblock%}

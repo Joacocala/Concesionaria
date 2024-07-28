@@ -1,0 +1,4 @@
+
+#Python 3.
+
+django version==5.0.6

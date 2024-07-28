@@ -1,0 +1,26 @@
+{% extends "Base.html" %}
+{%load static%}
+{%block header%}
+<header class="bg-dark py-5">
+    <div class="container px-4 px-lg-5 my-5">
+        <div class="text-center text-white">
+            <h1 class="display-4 fw-bolder">Nuevos Clientes</h1>
+            <p class="lead fw-normal text-white-50 mb-0">Ingresa los datos en el siguiente formulario.</p>
+        </div>
+    </div>
+</header>
+{%endblock%}
+{%block content %}
+
+<form action="formulariocliente" method="POST">
+    {% csrf_token %}
+    <p>Nombre: <input  type="text" name="nombre" class="form-control"></p>
+    <p>Apellido: <input type="text" name="apellido" class="form-control"></p>
+    <p>DNI: <input type="text" name="dni" class="form-control"></p>
+</div>
+
+<input type="submit" value="enviar" class="form-control" style="background: #000000;color: aqua;">
+
+</form>
+
+{%endblock%}
